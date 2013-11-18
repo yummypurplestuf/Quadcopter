@@ -25,16 +25,18 @@ while 1 :
     else:
         # send the character to the device
         # (note that I happend a \r\n carriage return and line feed to the characters - this is requested by my device)
-        
-        ser.write(input + '\n') # ser.write(input + '\r\n')
-        out = ''
+        if input == '+++':
+        	ser.write(input) # ser.write(input + '\r\n')
+        	out = ''
+        	time.sleep(1.25)
+        else:
+        	ser.write(input + '\r\n')
+        	out = ''
         # let's wait one second before reading output (let's give device time to answer)
-        time.sleep(1)
-        
+        time.sleep(.25)
+    
         while ser.inWaiting() > 0:
-            print ser.read()
             out += ser.read()
-            #print out
 
         if out != '':
-            print out
+        	print out
