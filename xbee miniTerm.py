@@ -28,12 +28,12 @@ while 1 :
         if input == '+++':
         	ser.write(input) # ser.write(input + '\r\n')
         	out = ''
-        	time.sleep(1.25)
+        	time.sleep(1.125)
         else:
         	ser.write(input + '\r\n')
         	out = ''
         # let's wait one second before reading output (let's give device time to answer)
-        time.sleep(.25)
+        time.sleep(.125)
     
         while ser.inWaiting() > 0:
             out += ser.read()
