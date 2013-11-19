@@ -1,7 +1,9 @@
 IP: 10.18.8.2
 
 
-
+git hub stuff:
+git reset --hard HEAD
+git pull
 
 
 
