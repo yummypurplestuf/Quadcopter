@@ -6,14 +6,18 @@ import time
 import serial
 
 # configure the serial connections (the parameters differs on the device you are connecting to)
+
+# The name xbee below requires you to add a udev rule in /etc/udev/rules.d/
 ser = serial.Serial(
-    port='/dev/ttyUSB0',
+    port='/dev/xbee',
     baudrate=9600,
     timeout= 0,
     parity=serial.PARITY_NONE,
     stopbits=serial.STOPBITS_ONE,
     bytesize=serial.EIGHTBITS
 )
+
+
 
 ser.isOpen()
 

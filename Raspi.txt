@@ -1,1 +1,14 @@
 IP: 10.18.8.2
+
+
+
+
+
+
+
+UDEV INFO:
+
+/etc/udev/rules.d/
+ACTION=="add", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6001", SYMLINK+="my_uart"
+
+udevadm info -a -p  $(udevadm info -q path -n /dev/ttyUSB0)
