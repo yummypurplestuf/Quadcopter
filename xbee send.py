@@ -36,7 +36,7 @@ while alive == True:
 	while ser_init == True:
 	    try:
 	    	# Send the string 'Hello World' to the module with MY set to 1
-			xbee.tx(dest_addr= '\x00\x01', data='Hello, World')z
+			xbee.tx(dest_addr= '\x00\x01', data='Hello, World')
 			# Delays the message from sending
 			time.sleep(3)
 	    except NameError:

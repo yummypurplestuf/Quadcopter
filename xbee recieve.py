@@ -20,8 +20,6 @@ while alive == True:
 		except OSError:
 				print "Please connect the correct Xbee"
 				
-
-	# Continuously send "Hello, World!"
 	while ser_init == True:
 	    try:
     		# Waits for a message to be recieved and prints it
