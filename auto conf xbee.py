@@ -31,7 +31,8 @@ AT_COMMANDS = ['+++', 'atre',
 LABELS = ['Serial Interfacing:', 'RF Interfacing', 'Network and Security',
           'I/O Settings', 'I/O Line Passing', 'Execution Commands', 
           'Diagnostics', 'AT Command Options']
-
+def recieve_message(message):
+  print ser.read()
 
 def send_command(command):
     # send the command to the device
