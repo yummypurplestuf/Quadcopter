@@ -2,11 +2,13 @@
 Continuously read the serial port and process IO data received from a remote XBee.
 """
 
+# This version is for the pi
+
 import time
 from xbee import XBee
 from serial import Serial
 
-ser = Serial('/dev/tty.usbserial-A7025WZ6', 9600)
+ser = Serial('/dev/xbee', 9600)
 
 xbee = XBee(ser)
 
