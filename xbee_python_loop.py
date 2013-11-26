@@ -13,13 +13,10 @@ ser = Serial('/dev/xbee', 9600)
 xbee = XBee(ser)
 
 # Continuously send
-i = 0
 while True:
     try:
-        for i in range(1):
-	        ser.write(str(i))
-	        print i
-	        time.sleep(.125)
+        ser.write("testing API")
+        time.sleep(.125)
 
     except KeyboardInterrupt:
         break
