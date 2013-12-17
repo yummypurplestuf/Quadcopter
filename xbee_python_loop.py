@@ -15,9 +15,9 @@ xbee = XBee(ser)
 # Continuously send
 while True:
     try:
-        ser.write("testing API")
-        time.sleep(.125)
-
+        send = ser.write("testing API")
+        print send
+        time.sleep(.5)
     except KeyboardInterrupt:
         break
         

@@ -17,6 +17,7 @@ while ser.isOpen():
         #print bool(message)
         print ser.read()
         #print message
+        flush('/dev/tty.usbserial-A7025WZO')
     except KeyboardInterrupt:
         break
         
