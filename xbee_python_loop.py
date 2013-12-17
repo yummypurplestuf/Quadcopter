@@ -8,7 +8,7 @@ import time
 from xbee import XBee
 from serial import Serial
 
-ser = Serial('/dev/xbee', 9600)
+ser = Serial('/dev/xbee', 57600)
 
 xbee = XBee(ser)
 
