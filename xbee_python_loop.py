@@ -8,16 +8,24 @@ import time
 from xbee import XBee
 from serial import Serial
 
-ser = Serial('/dev/xbee', 57600)
+ser = Serial('/dev/tty.usbserial-A7025WZ6', 57600)
+#ser = Serial('/dev/xbee', 57600)
 
 xbee = XBee(ser)
 
+data = 1
 # Continuously send
-while True:
+while data == 1:
     try:
-        send = ser.write("testing API")
-        print send
+        
+        signal = ['up', 'down', 'right', 'left']
+        #print signal
+        #send = xbee.send("str(signal")
+        xbee.send("at", frame="A", command='MY', parameter=None)
+        ser.flush()
+        #send = ser.writelines("testing API\n")
         time.sleep(.5)
+        data += 1
     except KeyboardInterrupt:
         break
         
