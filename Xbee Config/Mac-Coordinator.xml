@@ -51,7 +51,7 @@
       <setting command="P1">0</setting>
       <setting command="PT">FF</setting>
       <setting command="RP">28</setting>
-      <setting command="IA">��������</setting>
+      <setting command="IA">FFFFFFFFFFFFFFFF</setting>
       <setting command="T0">FF</setting>
       <setting command="T1">FF</setting>
       <setting command="T2">FF</setting>

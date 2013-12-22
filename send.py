@@ -4,7 +4,7 @@ from xbee import XBee
 from serial import Serial
 
 """
-serial_example.py
+serial_example.py`
 By Jared Luellen, 2013
 
 Demonstrates reading the low-order address bits from an XBee Series 1
@@ -20,17 +20,15 @@ def main():
     """
     try:
         
-        # Open serial port
-        ser = Serial('/dev/tty.usbserial-A7025WZ6', 57600)
-        
-        # Create XBee Series 1 object
-        
-        
         dest = '\x00\x01'  
         text = 'send message'
         
         send(dest, text)
         print "Comp: ", convert(dest)
+        
+
+
+
         # Wait for response
         #response = xbee.wait_read_frame()
         #print response
@@ -46,13 +44,13 @@ def main():
         ser.close()
     
 
-def convert(self, text):
+def convert(text):
     conv = "".join("%02x" % ord(c) for c in text)
     #print conv
     return conv
 
-def send(self, dest, text):
-    self.xbee.tx(dest_addr=dest, data=text)
+def send(dest, text):
+    xbee.tx(dest_addr=dest, data=text)
     # Need to figure out this section
     return
 
